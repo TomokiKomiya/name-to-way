@@ -199,18 +199,24 @@ class NameToWay(OpenRTM_aist.DataFlowComponentBase):
 			print(data.data)
             
 			# 入力データの文字列に応じてロボットを操作する
-			if data.data == "dog,1":
+			if data.data == "normal,2":
 				print("Go straight")
-				self._d_out.data.vx = 0.5
+				self._d_out.data.vx = 0.3
+				data.data = ""
             
-			elif data.data == "hook":
-				self._d_out.data.vx = -0.5
+			elif data.data == "sad,0":
+				self._d_out.data.vx = -0.3
+				data.data = ""
 
-			elif data.data == "pinwheel":
+			elif data.data == "cat,0":
+				print("Turn left")
 				self._d_out.data.va = 0.3
+				data.data = ""
 
-			elif data.data == "envelope":
+			elif data.data == "dog,1":
+				print("Turn right")
 				self._d_out.data.va = -0.3
+				data.data = ""
 
 			else:
 				self._d_out.data.vx = 0
