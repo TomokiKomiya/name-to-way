@@ -6,7 +6,7 @@ python NameToWay.py
 ```
 
 関数`onExecute`を編集して進行方向を決める.  
-例 : 入力が['a', 'b', 'c', 'd']の時以下を編集する.  
+例 : 入力が['a', 'b', 'c', 'd']の時以下を編集する.  
 
 ```
 def onExecute(self, ec_id):
